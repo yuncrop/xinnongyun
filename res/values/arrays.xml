@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <string-array name="date">
+        <item>苹果</item>
+        <item>木耳</item>
+        <item>黄瓜</item>
+        <item>白菜</item>
+        <item>包菜</item>
+        <item>猪</item>
+        <item>西红柿</item>
+        <item>番茄</item>
+        <item>蛇</item>
+        <item>火龙果</item>
+    </string-array>
+
+</resources>

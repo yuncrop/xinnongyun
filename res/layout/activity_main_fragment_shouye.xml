@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainfragment_shouye_rl"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        
+        android:id="@+id/ll_mainvp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/mainfragment_vp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp" />
+    </RelativeLayout>
+
+    <GridView
+        android:layout_marginTop="30dp"
+        android:id="@+id/mainfragmentGV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalSpacing="10dp" 
+        android:horizontalSpacing="10dp"
+        android:layout_below="@+id/ll_mainvp"
+        android:gravity="center"
+        android:numColumns="3" >
+    </GridView>
+</RelativeLayout>

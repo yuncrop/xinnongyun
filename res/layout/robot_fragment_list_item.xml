@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/slidemenu_item_selector"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#efefef" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/robot_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="机器人8号"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/textsizenormal" />
+
+        <com.xinnongyun.view.IconFontTextView
+            android:id="@+id/robot_power_tv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/robot_name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/robot_name" />
+
+        <com.xinnongyun.view.IconFontTextView
+            android:id="@+id/robot_isclock_tv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/robot_name"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/robot_power_tv" />
+
+        <com.xinnongyun.view.MyGridView
+            android:id="@+id/robot_item_contents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="#ffffff"
+            android:layout_below="@+id/robot_name"
+            android:numColumns="8"
+            android:paddingTop="5dp" >
+        </com.xinnongyun.view.MyGridView>
+    </RelativeLayout>
+
+</LinearLayout>

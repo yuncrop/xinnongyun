@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/head_weather_station_ll"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/liang"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="11dp" >
+
+            <com.xinnongyun.view.IconFontTextView
+                android:id="@+id/head_weather_station_iv"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:textColor="@color/color_weather_liang"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/head_weather_station_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/head_weather_station_iv"
+                android:text="环境小站"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+
+            <com.xinnongyun.view.IconFontTextView
+                android:id="@+id/weather_station_powder"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignBottom="@+id/head_weather_station_name"
+                android:layout_marginLeft="13dp"
+                android:layout_toRightOf="@+id/head_weather_station_name"
+                android:textSize="20sp" />
+
+            <com.xinnongyun.view.IconFontTextView
+                android:id="@+id/head_weather_station_sign"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignBottom="@+id/head_weather_station_name"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/weather_station_powder"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/head_weather_station_pm_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="6dp"
+                android:text="@string/defalut_"
+                android:textColor="@color/text_blue"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/head_weather_station_pm_num_level"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_above="@+id/head_weather_station_pm_num_unit"
+                android:layout_toRightOf="@+id/head_weather_station_pm_num"
+                android:background="@drawable/circle_rangle_you"
+                android:gravity="center"
+                android:text="@string/weather_station_level_liang"
+                android:textColor="@color/text_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/head_weather_station_pm_num_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/head_weather_station_pm_num"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@+id/head_weather_station_pm_num"
+                android:text="@string/pm25"
+                android:textColor="#999999"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <LinearLayout
+                    android:id="@+id/weather_station_head_tem_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/weather_station_head_tem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/defalut_"
+                        android:textColor="#0292db"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/farming_from_to_temunit"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weather_station_head_tem_ll"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/tem"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:background="#e0e0e0" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/weather_station_head_tem_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/weather_station_head_hum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/defalut_"
+                        android:textColor="#0292db"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/farming_from_to_humunit"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weather_station_head_tem_ll"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/hum"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:background="#e0e0e0" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/weather_station_head_tem_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/weather_station_head_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/defalut_"
+                        android:textColor="#0292db"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/farming_from_to_lightunit"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weather_station_head_tem_ll"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/light"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:background="#e0e0e0" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:id="@+id/weather_station_head_tem_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/weather_station_head_coo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/defalut_"
+                        android:textColor="#0292db"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/farming_from_to_coounit"
+                        android:textColor="#999999"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/weather_station_head_tem_ll"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/coo"
+                    android:textColor="#999999"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.xinnongyun.view.MyGridView
+        android:id="@+id/controlcenterList_GV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:gravity="center"
+        android:numColumns="1"
+        android:background="#ffffff"
+        android:verticalSpacing="1dp"
+        android:visibility="gone" >
+    </com.xinnongyun.view.MyGridView>
+    
+    <com.xinnongyun.view.MyGridView
+        android:id="@+id/cameraList_GV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/list_line"
+        android:gravity="center"
+        android:numColumns="1"
+        android:verticalSpacing="1dp"
+        android:visibility="gone" >
+    </com.xinnongyun.view.MyGridView>
+
+</LinearLayout>

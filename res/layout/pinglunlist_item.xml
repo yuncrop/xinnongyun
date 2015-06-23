@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <com.xinnongyun.view.CircleImageView
+            android:id="@+id/pinglun_head_iv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/head_40" />
+
+        <TextView
+            android:id="@+id/pinglun_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@+id/pinglun_head_iv"
+            android:text="小王"
+            android:textColor="@color/text_blue"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/pinglun_content_div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@+id/pinglun_name"
+            android:text="："
+            android:textColor="@color/text_blue"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/pinglun_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/pinglun_content_div"
+            android:text="哎呦不错哦"
+            android:textColor="@color/text_black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/pinglun_feedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:text="回复"
+            android:textColor="@color/text_blue"
+            android:textSize="13sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

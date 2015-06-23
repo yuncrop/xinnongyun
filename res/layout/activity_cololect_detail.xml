@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44"
+        android:background="@drawable/radial_gradient" >
+
+        <ImageView
+            android:id="@+id/collectReturn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/return_button" />
+
+        <TextView
+            android:id="@+id/collectdetailname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/collectname_empty"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/textsizebig" />
+
+        <ImageView
+            android:id="@+id/btn_collect_detail_setting"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/shezhi" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/list_line" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/list_line" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/typeImage"
+                    android:layout_width="75dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/chazi_default" />
+
+                <TextView
+                    android:id="@+id/collectRefreshTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/progressBar1"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="18dp"
+                    android:text="无"
+                    android:textColor="@color/text_fe462e"
+                    android:textSize="28sp" />
+
+                <TextView
+                    android:id="@+id/collectRefreshTime_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/collectRefreshTime"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/collectRefreshTime"
+                    android:text="更新"
+                    android:textColor="@color/text_fe462e"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/collectsignaltv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/collectRefreshTime"
+                    android:layout_marginLeft="@dimen/maring_10"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/signal"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/textsizelittle" />
+
+                <ImageView
+                    android:id="@+id/collectsignaliv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/collectRefreshTime"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toLeftOf="@+id/collectsignaltv"
+                    android:background="@drawable/xinhao" />
+
+                <TextView
+                    android:id="@+id/collectpowertv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/collectRefreshTime"
+                    android:layout_marginLeft="@dimen/maring_10"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/collectsignaliv"
+                    android:gravity="center_vertical"
+                    android:text="@string/power"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/textsizelittle" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    android:layout_width="35dp"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/collectRefreshTime"
+                    android:layout_toLeftOf="@+id/collectpowertv"
+                    android:background="@drawable/dianliang_duo"
+                    android:indeterminateOnly="false"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progressbar_dianchi" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/collectlist_item_ll"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/farmingItem_listlitem_tem_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center" >
+
+                    <LinearLayout
+                        android:id="@+id/farmingItem_listlitem_tem_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/collectdetail_tem"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_info"
+                            android:textColor="@color/text_blue"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/farming_from_to_temunit"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/textunit" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tem_soil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/farmingItem_listlitem_tem_ll"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/tem"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/textsizelittle" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/listitemline_l"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@color/list_line" />
+
+                <RelativeLayout
+                    android:id="@+id/farmingItem_listlitem_hum_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center" >
+
+                    <LinearLayout
+                        android:id="@+id/farmingItem_listlitem_hum_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/collectdetail_hum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_info"
+                            android:textColor="@color/text_blue"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/farming_from_to_humunit"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/textunit" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/hum_soil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/farmingItem_listlitem_hum_ll"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/hum"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/textsizelittle" />
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/light_slide"
+                    android:layout_width="@dimen/listitemline_l"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginTop="19dp"
+                    android:background="@color/list_line" />
+
+                <RelativeLayout
+                    android:id="@+id/farmingItem_listlitem_light_rl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center" >
+
+                    <LinearLayout
+                        android:id="@+id/farmingItem_listlitem_light_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/collectdetail_light"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/null_info"
+                            android:textColor="@color/text_blue"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/farming_from_to_lightunit"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/textunit" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/farmingItem_listlitem_light_ll"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center"
+                        android:text="@string/light"
+                        android:textColor="@color/text_grey"
+                        android:textSize="@dimen/textsizelittle" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="-8dp"
+                android:background="@color/list_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="8dp" >
+
+                <ImageView
+                    android:id="@+id/page1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_select_page" />
+
+                <ImageView
+                    android:id="@+id/page2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_select_page"
+                    android:visibility="invisible" />
+
+                <ImageView
+                    android:id="@+id/page3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/box_select_page"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chartll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical"
+                
+                android:paddingTop="45dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/timeline_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/collectdetail_slide_l"
+                        android:gravity="center"
+                        android:text="@string/box_collect_detail_today"
+                        android:textColor="@color/text_green"
+                        android:textSize="@dimen/textsizelittle" />
+
+                    <Button
+                        android:id="@+id/kline_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/collectdetail_rdefault"
+                        android:gravity="center"
+                        android:text="@string/box_collect_detail_sevenday"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/textsizelittle" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/list_line"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <View 
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/list_line" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/list_line" />
+
+</LinearLayout>

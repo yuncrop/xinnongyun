@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44"
+        android:background="@drawable/radial_gradient" >
+
+        <ImageView
+            android:id="@+id/main_openSlideMenu"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/carte" />
+
+        <TextView
+            android:id="@+id/shouye_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/farm_default_name"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsizebig" />
+
+        <TextView
+            android:id="@+id/shouye_head_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/shouye_video_head"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsizebig"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/renwu_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/main_renwu"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textsizebig"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/farm_headll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/shouye_head_farm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/farm_default_name"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textsizebig" />
+
+            <Button
+                android:id="@+id/farm_head_animal"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/slider_green_animal"
+                android:gravity="center"
+                android:text="@string/animation"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textsizelittle"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/farm_head_crop"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/slider_crop"
+                android:gravity="center"
+                android:text="@string/crop"
+                android:textColor="@color/text_green"
+                android:textSize="@dimen/textsizelittle"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/main_farming_being_shuaxin"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/shuaxin_circle"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/userrecord_iv"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:padding="10dp"
+            android:src="@drawable/shoot_top"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/popdelete_iv"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/delete_image_default"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/foot"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_image"
+        
+        android:gravity="center_vertical" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/mainfragment_shouye_et"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:src="@drawable/zhuye_press" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/mainfragment_video_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:src="@drawable/videolist" />
+
+            <TextView
+                android:id="@+id/mainfragment_video_et_head"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignRight="@+id/mainfragment_video_et"
+                android:layout_marginRight="-8dp"
+                android:background="@drawable/circle_red"
+                android:gravity="center"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textunit"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/mainfragment_farm_et"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nongchang" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_weight="1" >
+
+            <ImageView
+                android:id="@+id/mainfragment_renwu_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/renwu" />
+
+            <TextView
+                android:id="@+id/mainfragment_renwu_et_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/mainfragment_renwu_et"
+                android:layout_marginRight="-11dp"
+                android:background="@drawable/circle_red"
+                android:gravity="center"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textunit"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/foot"
+        android:layout_below="@+id/head"
+        layout="@layout/activity_main_fragment_shouye" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/foot"
+        android:layout_below="@+id/head"
+        layout="@layout/activity_main_fragment_video" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/foot"
+        android:layout_below="@+id/head"
+        layout="@layout/main_fragment_renwu" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/foot"
+        android:layout_below="@+id/head"
+        layout="@layout/main_fragment_farm" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/foot"
+        android:layout_below="@+id/head"
+        layout="@layout/main_fragment_farminglist_empty" />
+
+</RelativeLayout>

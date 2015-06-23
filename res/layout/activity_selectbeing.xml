@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44"
+        android:background="@drawable/radial_gradient" >
+
+        <ImageView
+            android:id="@+id/maturingatReturn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/return_button" />
+
+        <LinearLayout
+            android:id="@+id/beingtselect_headll"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/beingselect_head_animal"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/slider_green_animal"
+                android:gravity="center"
+                android:text="@string/animation"
+                android:textColor="@color/text_white"
+                android:textSize="@dimen/textsizelittle" />
+
+            <Button
+                android:id="@+id/beingselect_head_crop"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/slider_crop"
+                android:gravity="center"
+                android:text="@string/crop"
+                android:textColor="@color/text_green"
+                android:textSize="@dimen/textsizelittle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/collectslelect_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/beingselect_collecthead"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/textsizebig"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/selectbeing_new"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/add" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/selectbeing_foot"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/next_selector"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/text_white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <com.alex.listviewman.view.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/head"
+        android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:drawablePadding="5dp"
+        android:background="@drawable/edittext_bg_line"
+        android:hint="@string/search_hint"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:singleLine="true"
+        android:textColor="@color/text_grey"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/list_country"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/selectbeing_foot"
+        android:layout_below="@+id/filter_edit"
+        android:layout_gravity="center"
+        android:background="#ffffffff"
+        android:divider="@color/list_line"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:listSelector="@drawable/slidemenu_item_selector"
+        android:scrollbars="none" />
+
+    <!-- 点击字母后将选中的字母显示在中间，默认设置为不可见 -->
+
+    <TextView
+        android:id="@+id/dialog"
+        android:layout_width="60.0dip"
+        android:layout_height="60.0dip"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="#f0bcdaee"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="30.0sp"
+        android:visibility="gone" />
+
+    <!-- 自定义View -->
+
+    <com.alex.listviewman.view.SideBar
+        android:id="@+id/sidrbar"
+        android:layout_width="30dp"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/selectbeing_foot"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/filter_edit"
+        android:layout_gravity="right|center" />
+
+    <LinearLayout
+        android:id="@+id/beingMarturingll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/selectbeing_foot"
+        android:layout_below="@+id/head"
+        android:background="#ffffffff"
+        android:orientation="vertical"
+        android:text="@string/beingSelect_MaturingAt"
+        android:visibility="invisible" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="35dp"
+            android:background="@color/list_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <net.simonvt.numberpicker.NumberPicker
+                android:id="@+id/yearPicker"
+                android:layout_width="70dp"
+                android:layout_height="150dp"
+                android:divider="@color/text_blue"
+                android:gravity="center" />
+
+            <net.simonvt.numberpicker.NumberPicker
+                android:id="@+id/mouthPicker"
+                android:layout_width="70dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:divider="@color/text_blue"
+                android:gravity="center" />
+
+            <net.simonvt.numberpicker.NumberPicker
+                android:id="@+id/dayPicker"
+                android:layout_width="70dp"
+                android:layout_height="150dp"
+                android:divider="@color/text_blue"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/list_line" />
+
+        <Button
+            android:id="@+id/farmingbeingnew"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_btn_selector"
+            android:text="@string/complete"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/textsizebig" />
+    </LinearLayout>
+
+</RelativeLayout>

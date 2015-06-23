@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/renwu_video_state_ll"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp" >
+
+        <com.xinnongyun.view.IconFontTextView
+            android:id="@+id/renwu_videoitem_iv"
+            android:layout_width="70dp"
+            android:textSize="40sp"
+            android:textColor="#77be30"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/renwu_videoitem_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/renwu_videoitem_iv"
+            android:layout_toRightOf="@+id/renwu_videoitem_iv"
+            android:text="视频正在上传"
+            android:textColor="#4c4c4c"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/renwu_videoitem_iv"
+            android:layout_toLeftOf="@+id/renwu_videoitem_time"
+            android:layout_toRightOf="@+id/renwu_videoitem_iv"
+            android:gravity="bottom" >
+
+            <SeekBar
+                android:id="@+id/video_upload_progress"
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                    android:paddingTop="1.5dp"
+                    android:paddingBottom="1.5dp"
+                android:thumbOffset="0dp" 
+                android:layout_weight="1"
+                android:layout_marginLeft="-15dp"
+                android:clickable="false"
+                android:layout_marginRight="-15dp"
+                android:focusableInTouchMode="false"
+                android:progress="0"
+                android:progressDrawable="@drawable/seekbar_bg"
+                android:thumb="@drawable/seek_circle_green" />
+
+            <TextView
+                android:id="@+id/renwu_videoitem_precent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:text="0%"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/renwu_videoitem_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:paddingBottom="6dp"
+            android:text="00:00"
+            android:textColor="#0292db"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</LinearLayout>

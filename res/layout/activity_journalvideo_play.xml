@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/farmconfig_newfarm_LL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_34332c"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44" >
+
+        <ImageView
+            android:id="@+id/journalVideoReturn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/slidemenu_item_selector"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/return_button" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" >
+
+            <ImageView
+                android:id="@+id/share"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/slidemenu_item_selector"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:src="@drawable/share" />
+
+            <ImageView
+                android:id="@+id/popdelete_iv"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/slidemenu_item_selector"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:src="@drawable/caidan" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <include
+            android:id="@+id/sdsd"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_alignParentBottom="true"
+            layout="@layout/pinglun_dialog" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sdsd"
+            android:layout_alignParentTop="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/video_thumb_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp" >
+
+                    <VideoView
+                        android:id="@+id/journalVideoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <ImageView
+                        android:id="@+id/video_thumb_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/jiazailoading"
+                        android:scaleType="fitXY" />
+
+                    <RelativeLayout
+                        android:id="@+id/journalvideo_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#aaffffff" >
+
+                        <TextView
+                            android:id="@+id/videoshow_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="40dp"
+                            android:text="发表日期"
+                            android:textColor="#7ecdf4"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/user_HeadNameFarm_rl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/videoshow_time"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="23dp"
+                            android:layout_marginTop="20dp" >
+
+                            <ImageView
+                                android:id="@+id/userShowHead"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/head_100" />
+
+                            <TextView
+                                android:id="@+id/userShowName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/userShowHead"
+                                android:text="未设置"
+                                android:textColor="@color/text_black"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/userShowFarmName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/userShowHead"
+                                android:layout_toRightOf="@+id/userShowHead"
+                                android:text="农场名称"
+                                android:textColor="@color/text_999999"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/user_address_rl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_HeadNameFarm_rl"
+                            android:layout_centerHorizontal="true" >
+
+                            <ImageView
+                                android:id="@+id/video_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/dingwei" />
+
+                            <TextView
+                                android:id="@+id/videoShowFarmAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/video_address"
+                                android:text="拍摄地址"
+                                android:textColor="@color/text_999999"
+                                android:textSize="13sp" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/viewShowContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_address_rl"
+                            android:gravity="center"
+                            android:padding="15dp"
+                            android:text="视频描述"
+                            android:textColor="@color/text_999999"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/userVideoInfo_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/video_thumb_iv"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="15dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:layout_width="37dp"
+                            android:layout_height="37dp"
+                            android:background="@drawable/circle_whilt" />
+
+                        <ImageView
+                            android:id="@+id/userHead"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="1dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/head_100" />
+
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/userHead"
+                            android:text="张家"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/farmName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/userHead"
+                            android:layout_toRightOf="@+id/userHead"
+                            android:text="未设置"
+                            android:textColor="@color/text_white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/userAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="正在获取地理信息..."
+                            android:textColor="@color/text_white"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/userAddress"
+                            android:src="@drawable/gps" />
+
+                        <TextView
+                            android:id="@+id/videoRecordLocalTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/userHead"
+                            android:layout_alignParentRight="true"
+                            android:text="拍摄时间"
+                            android:textColor="@color/text_white"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/play_stop_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/video_thumb_iv"
+                        android:layout_marginTop="10dp"
+                        android:background="#bb313131"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/iv_play_stop"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/suspend" />
+
+                        <TextView
+                            android:id="@+id/timestart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="0:00"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp" />
+
+                        <SeekBar
+                            android:id="@+id/video_progress"
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:clickable="false"
+                            android:focusableInTouchMode="false"
+                            android:paddingBottom="1.5dp"
+                            android:paddingTop="1.5dp"
+                            android:progress="50"
+                            android:progressDrawable="@drawable/seekbar_bg"
+                            android:thumb="@drawable/seek_circle_green" />
+
+                        <TextView
+                            android:id="@+id/timesend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0:00"
+                            android:textColor="@color/text_white"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/weatherStationdetailll"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="#44ffffff"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:id="@+id/weather_station_head_tem_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/weather_station_head_coo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/defalut_"
+                                android:textColor="#0292db"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/pm_unit"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/PM25"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/weather_station_head_tem_ll"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/pm25"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="20dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:id="@+id/weather_station_head_tem_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/weather_station_head_tem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/defalut_"
+                                android:textColor="#0292db"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/farming_from_to_temunit"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/weather_station_head_tem_ll"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/tem"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="20dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:id="@+id/weather_station_head_tem_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/weather_station_head_hum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/defalut_"
+                                android:textColor="#0292db"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/farming_from_to_humunit"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/weather_station_head_tem_ll"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/hum"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="20dp"
+                        android:background="#e0e0e0" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:id="@+id/weather_station_head_tem_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal" >
+
+                            <TextView
+                                android:id="@+id/weather_station_head_light"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/defalut_"
+                                android:textColor="#0292db"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/farming_from_to_lightunit"
+                                android:textColor="#999999"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/weather_station_head_tem_ll"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/light"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/weatherLoacationll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:background="#44ffffff" >
+
+                    <TextView
+                        android:id="@+id/weather_station_detail_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:drawableLeft="@drawable/dingwei"
+                        android:gravity="center"
+                        android:textColor="#999999"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/haiba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:textColor="#999999"
+                        android:textSize="13sp" />
+                </RelativeLayout>
+
+                <HorizontalScrollView
+                    android:id="@+id/tanmuScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadeScrollbars="false"
+                    android:fadingEdge="none"
+                    android:fadingEdgeLength="0dp"
+                    android:scrollbarAlwaysDrawHorizontalTrack="true"
+                    android:scrollbarAlwaysDrawVerticalTrack="false"
+                    android:scrollbars="none" >
+
+                    <LinearLayout
+                        android:id="@+id/videoTanMull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RelativeLayout
+                            android:id="@+id/tanmurl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical" >
+                        </RelativeLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontnote
+-verbose
+
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.app.IntentService
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class com.android.vending.licensing.ILicensingService
+
+
+
+
+-keep class android.support.v4.app.** { *; }
+
+-keep interface android.support.v4.app.** { *; }
+
+-keep class com.actionbarsherlock.** { *; }
+
+-keep interface com.actionbarsherlock.** { *; }
+
+-dontwarn android.net.http.**
+-keep class android.net.http.** { *;}
+
+-dontwarn com.baidu.**
+-keep class com.baidu.** { *; }
+
+-dontwarn cn.jpush.**
+-keep class cn.jpush.** { *; }
+
+-dontwarn com.coremedia.**
+-keep class com.coremedia.** { *; }
+
+-dontwarn com.coremedia.**
+-keep class com.coremedia.** { *; }
+
+-dontwarn demo.**
+-keep class demo.** { *; }
+
+-dontwarn org.apache.**
+-keep class org.apache.** { *; }
+
+-dontwarn org.apache.**
+-keep class org.apache.** { *; }
+
+-dontwarn org.jdesktop.application.**
+-keep class org.jdesktop.application.** { *; }
+
+-dontwarn com.googlecode.mp4parser.**
+-keep class com.googlecode.mp4parser.** { *; }
+
+-dontwarn com.alibaba.fastjson.**
+-keep class com.alibaba.fastjson.** { *; }
+
+-dontwarn edu.emory.mathcs.backport.java.util.**
+-keep class edu.emory.mathcs.backport.java.util.** { *; }
+
+-dontwarn com.hik.**
+-keep class com.hik.**{*;}
+-dontwarn com.hikvision.**
+-keep class com.hikvision.**{*;}
+-dontwarn com.videogo.**
+-keep class com.videogo.**{*;} 
+
+
+-dontwarn com.googlecode.mp4parser.**
+-keep class com.googlecode.mp4parser.** { *; }
+
+-keep class com.tencent.mm.sdk.** {
+   *;
+}

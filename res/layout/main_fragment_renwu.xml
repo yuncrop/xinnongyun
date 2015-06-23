@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainfragment_renwu_ll"
+    android:background="#ffffff" 
+    android:visibility="invisible"
+    android:orientation="vertical" >
+    <ListView
+            android:id="@+id/renwu_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/list_line"
+            android:dividerHeight="1dp"
+            android:scrollbars="none"
+            android:fadingEdge="none" >
+        </ListView>
+
+</LinearLayout>

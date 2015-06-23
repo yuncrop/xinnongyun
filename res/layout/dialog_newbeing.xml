@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/tishi_dialog_show_bg"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp" >
+
+    <TextView
+        android:id="@+id/dialog_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/beingnew_dialog_head"
+        android:textColor="@color/text_green"
+        android:textSize="@dimen/textsizebig" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/edittext_bg_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:background="@drawable/dialog_cancel_selector"
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/beingnew_camera"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/textsizenormal" />
+        <Button
+            android:background="@drawable/dialog_confirm_selector"
+            android:id="@+id/fromsd"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/beingnew_fromsd"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/textsizenormal" />
+    </LinearLayout>
+
+</LinearLayout>

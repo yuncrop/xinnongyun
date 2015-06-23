@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44"
+        android:background="@drawable/radial_gradient" >
+
+        <ImageView
+            android:id="@+id/collectReturn"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/return_button" />
+
+        <TextView
+            android:id="@+id/collectdetailname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/collectname_empty"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/textsizebig" />
+
+        <ImageView
+            android:id="@+id/btn_collect_detail_setting"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/setting_selector"
+            android:paddingBottom="12dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/shezhi" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/list_line" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/list_line" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp" >
+
+                        <com.xinnongyun.view.IconFontTextView
+                            android:id="@+id/weather_station_detail_iv"
+                            android:layout_width="62dp"
+                            android:layout_height="62dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textColor="#e3e3e3"
+                            android:textSize="60sp" />
+
+                        <TextView
+                            android:id="@+id/weather_station_detail_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_toLeftOf="@+id/collectRefreshTime"
+                            android:layout_toRightOf="@+id/weather_station_detail_iv"
+                            android:maxLines="2"
+                            android:text="环境小站位置"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/haiba"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/weather_station_detail_lat_lng"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/weather_station_detail_iv"
+                            android:text="海拔"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/weather_station_detail_lat_lng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toRightOf="@+id/weather_station_detail_iv"
+                            android:text="@string/lat_lng"
+                            android:textColor="#999999"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/collectRefreshTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/progressBar1"
+                            android:layout_marginBottom="7dp"
+                            android:layout_marginTop="10dp"
+                            android:text="无"
+                            android:textColor="@color/text_fe462e"
+                            android:textSize="28sp" />
+
+                        <TextView
+                            android:id="@+id/collectRefreshTime_unit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@+id/collectRefreshTime"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_toRightOf="@+id/collectRefreshTime"
+                            android:text="更新"
+                            android:textColor="@color/text_fe462e"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/collectsignaltv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/collectRefreshTime"
+                            android:layout_marginLeft="@dimen/maring_10"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="-2dp"
+                            android:text="@string/signal"
+                            android:textColor="@color/text_grey"
+                            android:textSize="@dimen/textsizelittle" />
+
+                        <ImageView
+                            android:id="@+id/head_weather_station_sign"
+                            android:layout_width="14dp"
+                            android:layout_height="10dp"
+                            android:layout_below="@+id/collectRefreshTime"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toLeftOf="@+id/collectsignaltv"
+                            android:background="@drawable/xinhao" />
+
+                        <TextView
+                            android:id="@+id/collectpowertv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/collectRefreshTime"
+                            android:layout_marginLeft="@dimen/maring_10"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="-2dp"
+                            android:layout_toLeftOf="@+id/head_weather_station_sign"
+                            android:gravity="center_vertical"
+                            android:text="@string/power"
+                            android:textColor="@color/text_grey"
+                            android:textSize="13sp" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar1"
+                            android:layout_width="23dp"
+                            android:layout_height="10dp"
+                            android:layout_below="@+id/collectRefreshTime"
+                            android:layout_marginTop="2dp"
+                            android:layout_toLeftOf="@+id/collectpowertv"
+                            android:background="@drawable/dianliang_duo"
+                            android:indeterminateOnly="false"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/progressbar_dianchi" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="3dp"
+                        android:background="#e0e0e0" />
+
+                    <LinearLayout
+                        android:id="@+id/collectlist_item_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_tem_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_PM25"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pm_unit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/pm25a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/pm25"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_hum_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_PM1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pm_unit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/pm1a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/pm1"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_light_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_PM10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pm_unit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/pm10a"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/pm10"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#e0e0e0" />
+
+                    <LinearLayout
+                        android:id="@+id/collectlist_item_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_tem_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_TEM"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/farming_from_to_temunit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tem_soil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/tem"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_hum_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_ILLU"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/farming_from_to_lightunit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/hum_soil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/light"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_light_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_HUM"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/farming_from_to_humunit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/hum"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#e0e0e0" />
+
+                    <LinearLayout
+                        android:id="@+id/collectlist_item_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_tem_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_PRES"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/kpa"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tem_soil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/qiya"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_hum_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_DEW"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/farming_from_to_temunit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/hum_soil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/ludian"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_light_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_CO2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/farming_from_to_coounit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center"
+                                android:text="@string/coo"
+                                android:textColor="@color/text_grey"
+                                android:textSize="@dimen/textsizelittle" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#e0e0e0" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="15dp"
+                        android:text="30日平均"
+                        android:textColor="#feab0d"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#e0e0e0" />
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/collectlist_item_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal" >
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_tem_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_30_PM25"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pm_unit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_tem_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/pm25"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textsizelittle" />
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_30_PM25_level"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="（优）"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textsizelittle" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_hum_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_30_HUM"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/farming_from_to_humunit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_hum_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/hum"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textsizelittle" />
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_30_HUM_level"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="（舒适）"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textsizelittle" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#e0e0e0" />
+
+                        <RelativeLayout
+                            android:id="@+id/farmingItem_listlitem_light_rl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:gravity="center" >
+
+                            <LinearLayout
+                                android:id="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tableStationTimeLine_30_SUNNYPAR"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/defalut_"
+                                    android:textColor="@color/text_blue"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/farming_from_to_humunit"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textunit" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/farmingItem_listlitem_light_ll"
+                                android:layout_marginTop="2dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/hum"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textsizelittle" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="晴天比例"
+                                    android:textColor="@color/text_grey"
+                                    android:textSize="@dimen/textsizelittle" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#e0e0e0" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="15dp"
+                        android:text="今日曲线"
+                        android:textColor="#feab0d"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp" >
+
+                        <TextView
+                            android:id="@+id/today_pm25"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/pm25"
+                            android:textColor="#999999" />
+
+                        <TextView
+                            android:id="@+id/today_coo"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/coo"
+                            android:textColor="#999999" />
+
+                        <TextView
+                            android:id="@+id/today_tem"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/tem"
+                            android:textColor="#999999" />
+
+                        <TextView
+                            android:id="@+id/today_hum"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/hum"
+                            android:textColor="#999999" />
+
+                        <TextView
+                            android:id="@+id/today_illu"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/light"
+                            android:textColor="#999999" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/list_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="-8dp" >
+
+                        <ImageView
+                            android:id="@+id/page1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_select_page"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/page2"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_select_page"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/page3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_select_page" />
+
+                        <ImageView
+                            android:id="@+id/page4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_select_page"
+                            android:visibility="invisible" />
+
+                        <ImageView
+                            android:id="@+id/page5"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/box_select_page"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chartWeatherStationll"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:paddingTop="30dp"
+                        android:layout_marginBottom="30dp" >
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/list_line" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/list_line" />
+
+</LinearLayout>

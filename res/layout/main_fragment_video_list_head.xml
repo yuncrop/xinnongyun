@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="19dp" >
+
+        <ImageView
+            android:id="@+id/farmconfig_newfarm_image_bg"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+             android:scaleType="fitXY"
+            android:background="@drawable/farm_bg_default" />
+
+        <LinearLayout
+            android:id="@+id/journalvideo_noitify_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@+id/farmconfig_newfarm_image_bg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/userinfonum_bg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+            <com.xinnongyun.view.CircleImageView
+                android:id="@+id/zan_comment_tishi_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/head_40" />
+
+            <TextView
+                android:id="@+id/journal_no_read_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="100条新消息"
+                android:textColor="@color/text_white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_alignBottom="@+id/farmconfig_newfarm_image_bg"
+            android:layout_marginBottom="-31dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/nongchang_head"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp" >
+
+            <ImageView
+                android:id="@+id/farmconfig_newfarm_image_logo"
+                android:layout_width="match_parent"
+                 android:scaleType="fitXY"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pinglun_dialog_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffffff" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#ffffffff" >
+
+        <TextView
+            android:id="@+id/pinglun_send"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="#ffffffff"
+            android:gravity="center"
+            android:text="发送"
+            android:textColor="@color/text_black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/list_line" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/pinglun_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="41dp"
+            android:background="#ffffffff"
+            android:drawableLeft="@drawable/pen_hdpi"
+            android:drawablePadding="5dp"
+            android:hint="评论"
+            android:padding="2dp"
+            android:textColor="#999999"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="2dp"
+            android:layout_below="@+id/pinglun_content"
+            android:layout_marginRight="41dp"
+            android:background="@color/list_line" />
+    </LinearLayout>
+
+</RelativeLayout>

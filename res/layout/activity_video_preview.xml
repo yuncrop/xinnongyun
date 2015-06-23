@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_313131"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/videopreview_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.xinnongyun.view.FullScreenVideoView
+            android:id="@+id/videoViewPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/preview_control_ll"
+            android:layout_marginBottom="5dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginLeft="9dp"
+                android:background="@drawable/circle_whilt" />
+
+            <ImageView
+                android:id="@+id/userHead"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/head_100" />
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/userHead"
+                android:text="张家"
+                android:textColor="@color/text_white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/farmName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/userHead"
+                android:layout_toRightOf="@+id/userHead"
+                android:text="未设置"
+                android:textColor="@color/text_white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/userAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/video_record_not_sure"
+                android:textColor="@color/text_white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/userAddress"
+                android:src="@drawable/gps" />
+
+            <TextView
+                android:id="@+id/videoRecordLocalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/userHead"
+                android:layout_alignParentRight="true"
+                android:text="4月11日 09:43:23"
+                android:textColor="@color/text_white"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/preview_control_ll"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_313131"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/color_34332c" />
+
+            <Button
+                android:id="@+id/play_stop"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/suspend" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:id="@+id/timestart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00"
+                    android:textColor="@color/text_white" />
+
+                <SeekBar
+                    android:id="@+id/video_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="10dp"
+                    android:paddingTop="1.5dp"
+                    android:paddingBottom="1.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:progress="50"
+                    android:progressDrawable="@drawable/seekbar_bg"
+                    android:thumb="@drawable/seek_circle_green" />
+
+                <TextView
+                    android:id="@+id/timesend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0:00"
+                    android:textColor="@color/text_white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_44"
+        android:background="#000000" >
+
+        <Button
+            android:id="@+id/returnRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:background="@drawable/slidemenu_item_selector"
+            android:drawableLeft="@drawable/return_record"
+            android:padding="5dp"
+            android:text="拍摄"
+            android:textColor="@color/text_white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="预览"
+            android:textColor="@color/text_white"
+            android:textSize="@dimen/textsizebig" />
+
+        <Button
+            android:id="@+id/nextStep"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/slidemenu_item_selector"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="下一步"
+            android:textColor="@color/text_white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

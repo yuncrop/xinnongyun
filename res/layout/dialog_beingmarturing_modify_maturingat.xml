@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/tishi_dialog_show_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textColor="@color/text_green"
+        android:textSize="@dimen/textsizebig" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/list_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <net.simonvt.numberpicker.NumberPicker
+            android:id="@+id/farming_being_year"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:divider="@color/text_blue"
+            android:gravity="center" />
+
+        <net.simonvt.numberpicker.NumberPicker
+            android:id="@+id/farming_being_mouth"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:divider="@color/text_blue"
+            android:gravity="center" />
+
+        <net.simonvt.numberpicker.NumberPicker
+            android:id="@+id/farming_being_day"
+            android:layout_width="70dp"
+            android:layout_height="150dp"
+            android:divider="@color/text_blue"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/list_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dialog_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_cancel_selector"
+            android:text="@string/dilaog_cancel"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/sp_18" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/list_line" />
+
+        <Button
+            android:id="@+id/dialog_btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/dialog_confirm_selector"
+            android:text="@string/dilaog_submit"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/sp_18" />
+    </LinearLayout>
+
+</LinearLayout>

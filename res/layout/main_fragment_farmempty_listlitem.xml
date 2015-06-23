@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="5dp"
+    android:background="#ffffff"
+     >
+
+    <TextView
+        android:id="@+id/emptycollectname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:text="未设置"
+        android:textColor="@color/text_black"
+        android:textSize="15sp" />
+
+    <ImageView 
+        android:layout_marginTop="5dp"
+        android:id="@+id/emptycollect_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hezi_default"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        />
+    <TextView 
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/emptycollect_iv"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="@color/text_grey"
+        android:textSize="10sp"
+        android:text="点击启用设备"
+        />
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="activity_vertical_margin">10dp</dimen>
+    
+    <!-- 二维码 -->
+    <dimen name="standard_padding">8dip</dimen>
+    <dimen name="half_padding">4dip</dimen>
+    
+    <!-- 字体大小 -->
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name = "textsizebig">20sp</dimen>
+    <dimen name = "textsizenormal">15sp</dimen>
+    <dimen name = "textsizelittle">13sp</dimen>
+    <dimen name = "textunit">12sp</dimen>
+    <dimen name = "text8">8sp</dimen>
+    <dimen name = "yangzhengmasize">12sp</dimen>
+    <dimen name = "listitemline_h">2dp</dimen>
+    <dimen name = "listitemline_l">1dp</dimen>
+     <dimen name="height_6_">-6dp</dimen>
+    <dimen name="height_70">70dp</dimen>
+    <dimen name="height_40">40dp</dimen>
+    <dimen name="height_44">48dp</dimen>
+    <dimen name="farming_being_image_width">70dp</dimen>
+    <dimen name="maring_50">10dp</dimen>
+    <dimen name="maring_100">20dp</dimen>
+    <dimen name="maring_30">6dp</dimen>
+    <dimen name="maring_25">5dp</dimen>
+    <dimen name="maring_20">5dp</dimen>
+    <dimen name="maring_15">3dp</dimen>
+    <dimen name="maring_10">2dp</dimen>
+    <dimen name="maring__10">-2dp</dimen>
+    <dimen name="farming_being_name_ml">22px</dimen>
+    
+    
+    
+    
+    
+    
+</resources>

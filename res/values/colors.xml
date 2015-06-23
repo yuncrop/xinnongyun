@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="drawable_color_green">#77be30</drawable>
+    <drawable name="drawable_color_grey">#666666</drawable>
+
+    <color name="transparent">#00000000</color>
+
+    <item name="slideMenuClickBg" type="drawable">#66797979</item>
+    <item name="renwu_press_default" type="drawable">#eeeeee</item>
+    <item name="slideMenuClickBgDefault" type="drawable">#4c4c4c</item>
+    <item name="shouye_bottomdefault" type="drawable">#66666666</item>
+    <!-- 二维码 -->
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="possible_result_points">#c0ffbd21</color>
+    <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color>
+    <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="nicheng_splite">#c9c9c9</color>
+    <color name="bg_clolr_white">#ffffffff</color>
+    <color name="text_black">#ff4c4c4c</color>
+    <color name="camera_progress_split">#767678</color>
+    <color name="text_white">#fff2f2f2</color>
+    <color name="text_999999">#999999</color>
+    <color name="text_red">#fe462e</color>
+    <color name="text_grey">#66666666</color>
+    <color name="text_fe462e">#fe462e</color>
+    <color name="text_green">#77be30</color>
+    <color name="text_blue">#0292db</color>
+    <color name="shouye_foot">#f2f2f2</color>
+    <color name="list_line">#e0e0e0</color>
+    <color name="solilist_bg">#f2f2f2</color>
+    <color name="color_ff5842">#ff5842</color>
+    <item name="next_default" type="drawable">#d9a74a</item>
+    <item name="next_click" type="drawable">#66d9a74a</item>
+    <!-- gv BG -->
+    <color name="gv_blue_default">#7ecdf4</color>
+    <color name="gv_blue">#289ad2</color>
+    <color name="gv_cheng_default">#f29ae6</color>
+    <color name="gv_cheng">#c970bf</color>
+    <color name="gv_green_default">#77be30</color>
+    <color name="gv_green">#376e01</color>
+    <color name="color_313131">#313131</color>
+    <color name="color_34332c">#34332c</color>
+
+    <color name="color_weather_you">#77be30</color>
+    <color name="color_weather_liang">#7ecdf4</color>
+    <color name="color_weather_zhong">#1395d7</color>
+    <color name="color_weather_cha">#eda725</color>
+    
+    <color name="common_bg">#f0f0f3</color>
+    <color name="yingyunshi_black">#333333</color>
+    
+    
+    
+    
+    
+    
+    
+</resources>

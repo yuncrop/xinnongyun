@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <TextView
+        android:id="@+id/catalog_checkBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/list_line"
+        android:paddingBottom="5dip"
+        android:paddingLeft="15dip"
+        android:paddingTop="5dip"
+        android:visibility="gone"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/textunit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:paddingLeft="15dip"
+        android:paddingRight="30dip" >
+
+        <TextView
+            android:id="@+id/title_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="未设置"
+            android:textColor="@color/text_black"
+            android:textSize="18sp"
+            tools:ignore="InefficientWeight" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/collect_not_used"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:text="@string/collect_not_used"
+                android:textColor="@color/text_grey"
+                android:textSize="@dimen/textsizelittle"
+                android:visibility="invisible" />
+
+            <LinearLayout
+                android:id="@+id/collect_used_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|right"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/instand"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/textsizelittle" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="未设置"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/textsizelittle" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="未设置"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/textsizelittle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/marturing"
+                    android:textColor="@color/text_grey"
+                    android:textSize="@dimen/textsizelittle" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/checkBox"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/duoxuan_qian"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="right" />
+    </LinearLayout>
+
+</LinearLayout>

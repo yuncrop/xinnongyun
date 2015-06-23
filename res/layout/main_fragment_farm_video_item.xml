@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kuang"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/list_line" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/list_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="-9dp"
+            android:background="#add883" >
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/paishe_text_hint"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_above="@+id/farming_item_being_rl"
+                />
+            <RelativeLayout
+                android:id="@+id/farming_item_being_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:background="#99000000">
+
+                <TextView
+                    android:id="@+id/beingname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="番茄"
+                    android:textColor="@color/text_white"
+                    android:textSize="20sp" />
+                <TextView 
+                    android:layout_toRightOf="@+id/beingname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_blue"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignBottom="@+id/beingname"
+                    android:textSize="14sp"
+                    android:text="8月11日"
+                    />
+                <ImageView
+                    android:id="@+id/openClose"
+                    android:layout_width="30dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/zhankai_farming_settings"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    />
+                <ImageView 
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:background="#22000000"
+                    android:paddingTop="14dp"
+                    android:paddingBottom="14dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/paishe"
+                    
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/farminglitemSettingll"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/setting_beijing"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/maring_50"
+                android:paddingTop="20dp"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/farmingbeing_setHead_btn_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/slidemenu_item_selector"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/top_default" />
+
+                    <TextView
+                        android:id="@+id/farmingbeing_setHead_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/farming_being_setting_ordering_tv"
+                        android:textColor="@color/text_white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/farmingbeing_modifyMaturingAt_btn_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/slidemenu_item_selector"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/maturing_time_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/farming_being_setting_date_tv"
+                        android:textColor="@color/text_white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/farmingbeing_setAlarming_btn_ll"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/slidemenu_item_selector"
+                    android:gravity="center" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_menu_baojing" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/farming_being_setting_alarming_tv"
+                        android:textColor="@color/text_white"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <com.xinnongyun.adapter.MyListView
+            android:id="@+id/farm_item_collectlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/list_line"
+            android:dividerHeight="@dimen/listitemline_l"
+            android:fadingEdge="none"
+            android:listSelector="@drawable/slidemenu_item_selector" >
+        </com.xinnongyun.adapter.MyListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:background="@color/list_line" >
+    </LinearLayout>
+
+</LinearLayout>

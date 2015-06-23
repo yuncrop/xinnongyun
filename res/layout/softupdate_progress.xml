@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/tishi_dialog_show_bg" >
+
+    <TextView
+        android:id="@+id/dialog_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/textsizebig" />
+    <ProgressBar
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/update_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dialog_btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/list_line"
+            android:text="@string/version_update_cancel"
+            android:textColor="@color/text_grey"
+            android:textSize="@dimen/textsizebig" />
+
+        <Button
+            android:id="@+id/dialog_btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="#ffffffff"
+            android:text="@string/dilaog_submit"
+            android:textColor="@color/text_green"
+            android:textSize="@dimen/textsizebig" />
+    </LinearLayout>
+
+</LinearLayout>
