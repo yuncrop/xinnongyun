@@ -848,8 +848,6 @@ public class RenwuAdapter extends BaseAdapter {
 							
 							try {
 								
-								
-								
 								//TODO 安装中控
 								if(listData.get(position).get("subject").toString().equals("cc") && listData.get(position).get("signal").toString().equals("added"))
 								{
